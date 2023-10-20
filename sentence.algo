@@ -1,18 +1,15 @@
 ALGORITHM sentence
 VAR
-    nbvowel,nbcar,nbword := INTEGER ;
+    nbvowel,nbcar,nbword := INTEGER :=0;
     s := STRING ;
 BEGIN
-    nbvowel := 0;
-    nbcar :=0;
-    nbword :=1;
     write("the sentence")
     read(s)
   REPEAT
-    IF (s[nbcar]="") THEN
+    IF (s[nbcar]=" ") THEN
         nbword := nbword+1;
     END_IF
-    IF (s[nbcar]in["a","e","u","i","o","y"]) THEN
+    IF (s[nbcar]<>=["a","e","u","i","o","y"]) THEN
         nbvowel:=nbvowel+1;
     END_IF
     nbcar:=nbcar+1;
