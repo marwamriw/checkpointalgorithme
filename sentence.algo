@@ -9,7 +9,7 @@ BEGIN
     IF (s[nbcar]=" ") THEN
         nbword := nbword+1;
     END_IF
-    IF (s[nbcar]<>=["a","e","u","i","o","y"]) THEN
+    IF (s[nbcar]=["a","e","u","i","o","y"]) THEN
         nbvowel:=nbvowel+1;
     END_IF
     nbcar:=nbcar+1;
